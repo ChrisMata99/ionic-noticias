@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Christopher's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  <!-- <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let noticia of noticias; let i = index;">
+        <ion-card color="dark">
+          <ion-card-header>
+            <ion-card-subtitle>
+              <span class="text-primary">{{ i + 1 }}</span>
+              <span class="noticia-source-name">{{ noticia.source.name }}</span>
+            </ion-card-subtitle>
+            <ion-card-title>{{ noticia.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-img *ngIf="noticia.urlToImage" [src]="noticia.urlToImage"></ion-img>
+          <ion-card-content>
+            {{ noticia.description }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <app-noticias [noticias]="noticias"></app-noticias>
+  <ion-infinite-scroll color="light" disabled="false" threshold="150px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content color="light" loadingSpinner="bubbles" loadingText="Cargando data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

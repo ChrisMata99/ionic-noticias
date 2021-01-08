@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: '35076c7b11d3458cb7b17cdab12edb5f',
+  apiUrl: 'https://newsapi.org/v2',
+  proxyUrl: 'https://cors-anywhere.herokuapp.com/'
 };
 
 /*
